@@ -7,5 +7,5 @@ import {LoginComponent } from './login/login.component';
 })
 export class AppComponent {
   title = 'AMRITA';
-  name=LoginComponent.name;
+  
 }

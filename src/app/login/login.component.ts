@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
 login(l,p)
 {
   this.newItemEvent.emit(l.value);
-console.log(l.value);
-console.log(p.value);
+  console.log(l.value);
+  console.log(p.value);
 }
   ngOnInit(): void {
   }
