@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-
 import { AngularFireAuth } from '@angular/fire/auth';
 import firebase from 'firebase/app'
 import { Router } from '@angular/router';
@@ -32,5 +31,6 @@ export class RegisterComponent implements OnInit {
     this.registerstatus=true;
   this.messg="Registered Successfully"
   }
+  
 
 }

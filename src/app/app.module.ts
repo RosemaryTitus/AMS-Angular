@@ -13,13 +13,15 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
  import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
  import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { MessageComponent } from './message/message.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
      RegisterComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    MessageComponent
   ],
   
   imports: [

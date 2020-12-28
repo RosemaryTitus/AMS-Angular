@@ -8,6 +8,7 @@
     <input type="text" #user placeholder="Enter Username"  formControlName="email">
     <input type="text" #pass placeholder="Enter Password"  formControlName="password">
     <input type="submit" #submit value="Register" (click)="createUser()" > 
+    
 </form>
 </div>
 <div *ngIf="registerstatus">
