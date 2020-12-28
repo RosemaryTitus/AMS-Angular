@@ -2,12 +2,12 @@
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
-<form>
+<form [formGroup]="registerForm">
     <h2>Register</h2>
-    <input type="text" #id placeholder="Enter Name">
-    <input type="text" #oldpass placeholder="Enter Username">
-    <input type="text" #newpass placeholder="Enter Password">
-    <input type="submit" #submit value="Register">
+
+    <input type="text" #user placeholder="Enter Username"  formControlName="email">
+    <input type="text" #pass placeholder="Enter Password"  formControlName="password">
+    <input type="submit" #submit value="Register" > 
 </form>
 </div>
 </div>

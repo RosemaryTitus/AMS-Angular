@@ -5,14 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>',
-    appId: '<your-app-id>',
-    measurementId: '<your-measurement-id>'
+    apiKey: "AIzaSyB5W0o3wxxi5ZAGwQEl2nVziBOJhrnnZBA",
+    authDomain: "ams-angular.firebaseapp.com",
+    projectId: "ams-angular",
+    storageBucket: "ams-angular.appspot.com",
+    messagingSenderId: "336642369428",
+    appId: "1:336642369428:web:4fcc576fd3c124ad035181",
+    measurementId: "G-4HQYM337SJ"
   }
 };
 
