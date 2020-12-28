@@ -7,7 +7,13 @@
 
     <input type="text" #user placeholder="Enter Username"  formControlName="email">
     <input type="text" #pass placeholder="Enter Password"  formControlName="password">
-    <input type="submit" #submit value="Register" > 
+    <input type="submit" #submit value="Register" (click)="createUser()" > 
 </form>
+</div>
+<div *ngIf="registerstatus">
+    <div class="alert">
+        <p>{{messg}}</p>
+    </div>
+   
 </div>
 </div>

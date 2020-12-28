@@ -13,16 +13,15 @@ export class RegisterComponent implements OnInit {
  registerForm:FormGroup;
  constructor(private fb:FormBuilder,public auth: AngularFireAuth,private router:Router) { }
 
-  // ngOnInit(): void {
-  //   this.registerForm=this.fb.group({
-  //     email:new FormControl('',Validators.required),
-  //  password:new FormControl('',[Validators.required,Validators.minLength(6)]),
+  ngOnInit(): void {
+    this.registerForm=this.fb.group({
+      email:new FormControl('',Validators.required),
+   password:new FormControl('',[Validators.required,Validators.minLength(6)]),
 
-  //    })
-  // }
-  ngOnInit():void{
-    this.registerForm = this.fb.group({   email: '',   password: '' }); 
+     })
   }
+ messg="";
+ registerstatus=false;
   createUser()
   {
     const{email,password}=this.registerForm.value;
@@ -30,6 +29,8 @@ export class RegisterComponent implements OnInit {
       console.log('RegisterComponent -> createUser ->user',user)
       this.router.navigate([''])
     });
+    this.registerstatus=true;
+  this.messg="Registered Successfully"
   }
 
 }

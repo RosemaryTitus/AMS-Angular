@@ -54,14 +54,22 @@
   
    
  
+  *:focus {
+    outline: none;
+} 
   
+    .alert {
+      padding: 6px;
+      background-color: success;
+      color: white;
+    }
   
   
   input[type=button], input[type=submit], input[type=reset]  {
     background-color: #56baed;
     border: none;
     color: white;
-    padding: 15px 80px;
+    padding: 10px 80px;
     text-align: center;
     text-decoration: none;
     /* display: inline-block; */
