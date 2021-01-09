@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   constructor(private fb:FormBuilder,private auth:AngularFireAuth,private router:Router) { }
   // @Output() newItemEvent = new EventEmitter<string>();
   
-
+log=true;
   ngOnInit(): void {
     this.onLogin=this.fb.group({
       email:new FormControl('',Validators.required),

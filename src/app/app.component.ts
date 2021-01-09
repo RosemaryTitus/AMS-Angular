@@ -7,9 +7,7 @@ import {AngularFireDatabase} from '@angular/fire/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'AMRITA';
-  // constructor(db:AngularFireDatabase)
-  // {
-  //   db.list('')
-  // }
+ 
+  log=false;
+
 }
