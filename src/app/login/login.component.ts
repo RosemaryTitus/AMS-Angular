@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   onLogin:FormGroup;
   constructor(private fb:FormBuilder,private auth:AngularFireAuth,private router:Router) { }
   // @Output() newItemEvent = new EventEmitter<string>();
-  
-log=true;
+  check_login:boolean;
+
   ngOnInit(): void {
     this.onLogin=this.fb.group({
       email:new FormControl('',Validators.required),
@@ -25,9 +25,10 @@ log=true;
   login()
 {
   // this.newItemEvent.emit(l.value);
+  
   const{email,password}=this.onLogin.value;
   this.auth.signInWithEmailAndPassword(email,password).then(()=>this.router.navigate(['home']));
-  
+  this.check_login=false;
 }
 
 }

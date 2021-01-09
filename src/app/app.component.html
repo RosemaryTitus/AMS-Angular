@@ -1,17 +1,24 @@
 
+<div *ngIf="login;else home">
+  
 
- <nav class="navbar navbar-dark bg-dark">
-  <!-- Navbar content -->
- <h2>AMRITA</h2>
- <form class="d-flex">
-   <div style="margin-right:10px">
-    <a  [routerLink]="['login']">Login</a>
-   </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar content -->
+   <h2>AMRITA</h2>
+   <form class="d-flex">
+     <div style="margin-right:10px">
+      <a  [routerLink]="['login']">Login</a>
+     </div>
+   
+   <!-- <div >
+    <a  [routerLink]="['login']">Logout</a>
+   </div> -->
+    <!-- <a routerLink="/registration"><button class="btn btn-success" >LOGIN</button></a> -->
+  </form>
+  </nav>
+</div>
+<ng-template #home>
+  <app-home></app-home>
+</ng-template>
  
- <div *ngIf="log">
-  <a  [routerLink]="['login']">Logout</a>
- </div>
-  <!-- <a routerLink="/registration"><button class="btn btn-success" >LOGIN</button></a> -->
-</form>
-</nav>
 <router-outlet></router-outlet>
