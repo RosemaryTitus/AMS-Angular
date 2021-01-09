@@ -10,10 +10,12 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { AngularFireModule } from '@angular/fire';
+// import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
  import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
  import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MessageComponent } from './message/message.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { MessageComponent } from './message/message.component';
     HomeComponent,
      RegisterComponent,
     ForgotpasswordComponent,
-    MessageComponent
+    MessageComponent,
+  
   ],
   
   imports: [
@@ -33,7 +36,7 @@ import { MessageComponent } from './message/message.component';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
      AngularFireAnalyticsModule,
-     AngularFirestoreModule
+     AngularFirestoreModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

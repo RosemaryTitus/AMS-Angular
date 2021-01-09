@@ -7,15 +7,15 @@ import { MessageComponent } from './message/message.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { AngularFireAuth } from '@angular/fire/auth';
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['message']);
- const redirectLoggedInToItems = () => redirectLoggedInTo(['home']);
-
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+// const redirectLoggedInToItems = () => redirectLoggedInTo(['home']);
+import { canActivate } from '@angular/fire/auth-guard';
 const routes: Routes = [
   { path: 'register', component: RegisterComponent},
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent,canActivate: [AngularFireAuthGuard]},
   {path:'message',component:MessageComponent},
   { path: 'forgotpassword', component: ForgotpasswordComponent},
-  { path: 'home', component:  HomeComponent , canActivate: [AngularFireAuthGuard] },
+  { path: 'home', component:  HomeComponent , canActivate: [AngularFireAuthGuard] , data: { authGuardPipe:  redirectUnauthorizedToLogin }},
   {path:'',component:LoginComponent,canActivate:[AngularFireAuth]}
 ]
 ;

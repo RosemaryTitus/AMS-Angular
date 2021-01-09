@@ -4,6 +4,7 @@ import { Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,8 +27,7 @@ export class LoginComponent implements OnInit {
   // this.newItemEvent.emit(l.value);
   const{email,password}=this.onLogin.value;
   this.auth.signInWithEmailAndPassword(email,password).then(()=>this.router.navigate(['home']));
-  // const redirectToProfileEditOrLogin = () => map(user => user ? ['profiles', user, 'edit'] : ['login']);
-  // const accountAdmin = (next) => pipe(customClaims, map(claims => claims[`account-${next.params.accountId}-role`] === 'home'));
+  
 }
 
 }

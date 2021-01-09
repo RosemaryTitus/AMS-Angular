@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-forgotpassword',
   templateUrl: './forgotpassword.component.html',
@@ -7,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotpasswordComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+   
+  ) { }
+
+
 
   ngOnInit(): void {
   }
